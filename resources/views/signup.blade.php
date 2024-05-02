@@ -11,24 +11,24 @@
     
     <div class="container p-5 my-5 bg-dark text-white" style="width:600px;text-align:center;">
     <h1 style="color:white;"> Sign Up</h1>
-    <form method='post' action="{{route('signup.submit')}}">
+    <form method='POST' action="{{url('signin-2')}}">
     @csrf
     <div class="row mb-3 mt-5" >
     <label for="inputname" class="col-sm-2 col-form-label">Name</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="name" id="inputname">
+      <input type="text" class="form-control" name="name" id="inputname" required>
     </div>
   </div>
   <div class="row mb-3 " >
     <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
     <div class="col-sm-10">
-      <input type="email" class="form-control" name = "email" id="inputEmail3">
+      <input type="email" class="form-control" name = "email" id="inputEmail3" required>
     </div>
   </div>
   <div class="row mb-3">
     <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" name = "password" id="inputPassword3">
+      <input type="password" class="form-control" name = "password" id="inputPassword3" required>
     </div>
   </div>
   
@@ -37,7 +37,7 @@
   
  
 </form> 
-<p>Already have an account? <a href="{{route('signup')}}">Click here to sign in</a></p>
+<p>Already have an account? <a href="{{url('signin')}}">Click here to sign in</a></p>
     </div>
 
 </body>

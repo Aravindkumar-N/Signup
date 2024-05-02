@@ -8,10 +8,11 @@
 </head>
 <body>
   
-<form >
-  @csrf
+   
 <div class="container p-5 my-5 bg-dark text-white" style="width:600px;text-align:center;">
     <h1 style="color:white;"> Sign In</h1>
+    <form method='post'action="{{url('check')}}" >
+     @csrf
   <div class="row mb-3 mt-5" >
     <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
     <div class="col-sm-10">
@@ -26,10 +27,11 @@
   </div>
   
   <button type="submit" class="btn btn-primary">Sign in</button>
-
-  <p>Don't have an account?  <a href="{{route('signup')}}">Click here to sign in</a></p>
+  </form> 
+  <p>Don't have an account?  <a href="{{url('/')}}">Click here to sign up</a></p>
+  
   </div>
  
-</form> 
+
 </body>
 </html>

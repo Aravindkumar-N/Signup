@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebBlogController;
-
+use App\Http\Controllers\SigninController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,6 +14,10 @@ use App\Http\Controllers\WebBlogController;
 |
 */
 
-Route::get('/', [WebBlogController::class, 'showSignupForm']) ->name('signup');
+Route::get('', [WebBlogController::class, 'showSignupForm']);
+Route::get('signin', [WebBlogController::class, 'showSigninForm']);
 
-Route::post('/signin', [WebBlogController::class, 'signup'])->name('signup.submit');
+Route::post('signin-2', [WebBlogController::class, 'signup']);
+
+Route::post('check', [SigninController::class, 'check']);
+Route::get('/home', [SigninController::class, 'home'])->name('home');
